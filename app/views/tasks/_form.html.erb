@@ -1,0 +1,20 @@
+<%= form_for @task do |f| %>
+  <div>
+  <%= f.label :title %>
+  </div>
+  <div >
+  <%= f.text_field :title, class:"form-control" %>
+  </div>
+  <div>
+  <%= f.label :details %>
+  </div>
+  <div>
+  <%= f.text_field :details, class:"form-control" %>
+  </div>
+  <div>
+    <% if f.object.persisted? %>
+      <%= f.label :completed %>
+    <% end %>
+  </div>
+  <%= f.submit class:"btn btn-primary" %>
+  <% end %>

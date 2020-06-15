@@ -1,0 +1,22 @@
+<div class=container>
+  <h1> <%= @task.title %>  </h1>
+  <div class="alert alert-secondary" role="alert">
+    <p> <%= @task.details %></p>
+  </div>
+  <div>
+    <% if @task.completed %>
+      <i class="fa fa-check-square-o"></i> This task is completed
+    <% else %>
+      <i class="far fa-square"></i> This task is not completed
+    <% end %>
+  </div>
+  <hr>
+  <%= link_to edit_task_path do %>
+    <i class="fa fa-pencil"></i> Edit task
+    <% end %>
+  <hr>
+  <%= link_to tasks_path do %>
+  <i class="fa fa-history"></i> Back to list
+  <% end %>
+</div>
+
